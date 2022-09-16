@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.catalina.filters.ExpiresFilter;
 import org.springframework.beans.BeanUtils;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +19,7 @@ import java.net.URI;
 @RestController
 @RequestMapping("/cliente")
 @RequiredArgsConstructor
+@EnableEurekaClient
 public class ClienteControler {
 
     private final ClienteService clienteService;
